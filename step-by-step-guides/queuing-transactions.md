@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Queuing transactions
 
 ### What is queuing?
