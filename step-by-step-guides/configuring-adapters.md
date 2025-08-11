@@ -24,7 +24,7 @@ Existing offchain infra (Front End, Liquidator) rely on router for finding paths
 | <p><em><strong>Curve</strong></em> <br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#curve-stableswap-cryptoswap-and-stableng">Stableswap, CryptoSwap, Stable NG</a></p>                                                                                                                                                     | Swaps, LP deposits                                   |
 | [_**Pendle**_](https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#curve-stableswap-cryptoswap-and-stableng)                                                                                                                                                                                                                                | PT swaps                                             |
 | <p><em><strong>Mellow</strong></em><br>ERC4626 vaults, DVstETH, Wrapper deposits</p>                                                                                                                                                                                                                                                                                                | Instant deposits, Delayed withdrawals                |
-| <p><em><strong>Velodrome, Aerodrome</strong></em> <br>V2, V3, Stableswap</p>                                                                                                                                                                                                                                                                                                        | Swaps                                                |
+| <p><em><strong>Velodrome, Aerodrome</strong></em> <br>V3, Stableswap</p>                                                                                                                                                                                                                                                                                                            | Swaps                                                |
 | <p><em><strong>Camelot, Thena</strong> (Algebra AMM dexes)</em><br>V3</p>                                                                                                                                                                                                                                                                                                           | Swaps                                                |
 | _**Napier**_                                                                                                                                                                                                                                                                                                                                                                        | PT Swaps, LP deposits                                |
 | _**Convex**_                                                                                                                                                                                                                                                                                                                                                                        | Staking LP, claiming rewards                         |
@@ -81,7 +81,7 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
 
 <summary><strong>Uniswap, Sushiswap, Pancakeswap, IguanaDEX, Oku trade V3</strong></summary>
 
-*   **Add UniswapV3 adapter (requires providing router address):**
+*   **Add UniswapV3 adapter (requires providing SwapRouter address):**
 
     <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
@@ -126,6 +126,38 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.21.22.png" alt=""><figcaption></figcaption></figure>
 -   [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
+
+    <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.28.59.png" alt=""><figcaption></figcaption></figure>
+
+</details>
+
+<details>
+
+<summary><strong>Velodrome, Aerodrome V3 (Slipstream)</strong></summary>
+
+*   **Add UniswapV3 adapter (requires providing SwapRouter address):**
+
+    <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+    * Velodrome V3 (Slipstream) multichain deployment addresses: [https://github.com/velodrome-finance/superchain-slipstream/blob/main/deployment-addresses](https://github.com/velodrome-finance/superchain-slipstream/blob/main/deployment-addresses)
+    * Aerodrome V3 (Slipstream) [https://github.com/aerodrome-finance/slipstream?tab=readme-ov-file#deployment](https://github.com/aerodrome-finance/slipstream?tab=readme-ov-file#deployment)
+
+-   **Configure adapter to whitelist pools:**\
+    &#xNAN;_&#x43;onfiguration requires specifying tokens and fee from a pair_
+
+
+
+    <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.23.10 (1).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+
+*   Uni V3
+
+    <figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+*   Sushi V3
+
+    <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.21.22.png" alt=""><figcaption></figcaption></figure>
+*   [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.28.59.png" alt=""><figcaption></figcaption></figure>
 

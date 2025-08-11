@@ -57,6 +57,9 @@ _**Pyth dashboard with feeds info:**_ [_**https://insights.pyth.network/price-fe
 * Pyth
   * Address of Pyth singleton contract on the target chain\
     see here: [https://docs.pyth.network/price-feeds/contract-addresses/evm](https://docs.pyth.network/price-feeds/contract-addresses/evm)
+    * Ethereum - 0x4305FB66699C3B2702D4d05CF36551390A4c69C6
+    * Berachain - 0x2880aB155794e7179c9eE2e38200202908C17B43
+    * Etherlink - 0x2880aB155794e7179c9eE2e38200202908C17B43
 * maxConfToPriceRatio (takes value in bps: 300 = 3%)
   * Except for the current price, Pyth returns confidence interval
   * If the width of confidence interval in % is larger than this parameter, feed ourput is considered invalid causing tx revert

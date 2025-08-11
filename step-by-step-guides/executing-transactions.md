@@ -2,6 +2,10 @@
 
 After the changes in GIP were tested and are ready to be executed onchain, go to the GIP page and click "Finalize GIP".
 
+{% hint style="info" %}
+If the only button you see is "Reopen for Changes", click it and you will be able to finalize the GIP again.
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/Screenshot 2025-08-08 at 11.43.06.png" alt=""><figcaption></figcaption></figure>
 
 ## Executing with Gearbox open-sourced Safe Permissionless UI
