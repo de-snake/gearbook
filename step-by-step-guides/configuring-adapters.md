@@ -54,6 +54,8 @@ All the source code and audit reports of the contracts can be found in [Bytecode
     * Uni V2 deployment addresses: [https://docs.uniswap.org/contracts/v2/reference/smart-contracts/v2-deployments](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/v2-deployments)
     * Sushi V2 deployment addresses: [https://github.com/sushiswap/v2-core/tree/master/deployments](https://github.com/sushiswap/v2-core/tree/master/deployments)
 
+
+
 {% hint style="warning" %}
 Before allowing pools in adapter, please ensure that tokens from a pair are added as _**Assets to Market**_ and as _**Collaterals to Credit Manager**_.\
 \
@@ -101,6 +103,7 @@ If it's not, reach out to Gearbox contributors.
 * Custom SwapRouter deployments:
   * Uni V3
     * [BNB chain](https://bscscan.com/address/0xe7aC922b9751C7aca3A46D5505F36d5BbB1456b6#code)
+  * asd
   * Oku Trade
     * [Etherlink](https://explorer.etherlink.com/address/0x2afB54fcaECd41BE4Ecd05d7bd2e193F2F05B99d?tab=contract)
 
@@ -273,6 +276,10 @@ Before adding pool to adapter, please ensure that pool's input token and PT toke
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-31 at 19.07.10.png" alt=""><figcaption></figcaption></figure>
 
+    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-31 at 19.08.20 (1).png" alt=""><figcaption></figcaption></figure>
 * _**Input token:**_\
   Select a token that is in the "1 SY Equals To" row on the screenshot above ^
@@ -316,7 +323,7 @@ Search the name based on required tokens above.
 
 <summary><strong>ERC4626</strong></summary>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Takes ERC4626 **Vault Address** as parameter. Target vault must be added as Asset to Market and as Collateral to Credit Manager.
 
@@ -343,7 +350,7 @@ e.g. sUSDe can be minted from USDe using ERC4626 deposit interface, but has time
 
 Takes Gateway Address as parameter. On Berachain it's 0x8d41361d340515d1cdd8c369ca7b5c79f6b2e9c9.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After adding adapter, click configure to whitelist particular Islands.
 
@@ -354,5 +361,59 @@ Before adding Island to adapter, please ensure that Island's tokens and Island i
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-08-06 at 23.21.42.png" alt=""><figcaption></figcaption></figure>
+
+</details>
+
+<details>
+
+<summary><strong>Convex-staked Curve LP</strong></summary>
+
+{% hint style="warning" %}
+Before adding and configuring Convex pool adapters, ensure that **Curve LP token**, **Convex Deposit Token**, **Staked Phantom Token**, **CRV** and **CVX** are added as collaterals to Market and Credit Manager (everything except **Staked Phantom Token** can have zero limit, LT and feed).\
+\
+\
+**Convex Deposit Token** can be found by its symbol. If the Curve LP token has symbol frxUSDUSDf, then Convex deposit token will have symbol cvxfrxUSDUSDf.
+
+
+
+**Staked Phantom Token** can be found by its symbol. If the Curve LP token has symbol frxUSDUSDf, then Convex deposit token will have symbol stkcvxfrxUSDUSDf.
+{% endhint %}
+
+**Add Convex Base Reward Pool adapter.**&#x20;
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+* _**Base Reward Pool Address:**_
+  *   Rewards contract address from Convex pool Info.
+
+      <figure><img src="../.gitbook/assets/Screenshot 2025-08-11 at 18.25.08.png" alt=""><figcaption></figcaption></figure>
+
+- _**Staked phantom token:**_
+  * **Staked Phantom Token** can be found by its symbol. If the Curve LP token has symbol frxUSDUSDf, then Convex deposit token will have symbol stkcvxfrxUSDUSDf.
+
+**Add Convex Booster adapter**
+
+{% hint style="success" %}
+If the Credit Manager already includes the Convex Booster adapter, skip it and proceed to the next step (Update Convex booster Pool IDs).
+{% endhint %}
+
+{% hint style="info" %}
+Booster address is single across all chains and is suggested as default option.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+**Update Convex booster Pool IDs**
+
+{% hint style="info" %}
+After each new Convex pool is added, Booster pool ids should be updated.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-08-11 at 18.49.58.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-08-11 at 18.51.39.png" alt=""><figcaption></figcaption></figure>
+
+\
+
 
 </details>
