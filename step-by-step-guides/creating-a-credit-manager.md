@@ -2,7 +2,20 @@
 
 {% stepper %}
 {% step %}
-### **Interest Fee**
+### Name
+
+Name can reflect the properties of collaterals and position size:
+
+* Volatile/ Correlated&#x20;
+* Blue-chip/ Experimental
+* Small/ Medium/ Big (depending on account debt limit)
+
+Simple notation is calling naming it with tiers: Tier 1; Tier 2; Tier 3\
+Higher tier means larger positions and safer collaterals.
+{% endstep %}
+
+{% step %}
+**Interest Fee**
 
 % of borrowing interest taken by DAO and Curator\
 Default fee split is 50/50 between DAO and Curator
