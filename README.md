@@ -13,6 +13,10 @@ Anyone can deploy Market Configurator to create and manage Gearbox Markets witho
 Gearbox Market is a set of modular contracts allowing to facilitate lending, borrowing and productive usage of collaterals at rules set by Curator.\
 Properties of a single market include but are not limited to Underlying Token, its Price Feed, Interest Rate Model, collateral-specific Limits and Additional Rates.
 
+### What is Gearbox Instance?
+
+Instance = Chain id activated by DAO for deployment + Chain-specific address of DAO Treasury + Instance Owner multisig that helps configure chain-specific parameters but can't affect Markets configuration.
+
 ### What can curator change?
 
 The Curator can adjust all Market parameters, with a mandatory 24-hour timelock enforced at the smart-contract level for any changes.
