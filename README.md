@@ -15,7 +15,7 @@ Properties of a single market include but are not limited to Underlying Token, i
 
 ### What is Gearbox Instance?
 
-Instance = Chain id activated by DAO for deployment + Chain-specific address of DAO Treasury + Instance Owner multisig that helps configure chain-specific parameters but can't affect Markets configuration.
+**Instance** = **Chain ID** activated by DAO for deployment + Chain-specific address of **DAO Treasury** + **Instance Owne**r multisig that helps configure chain-specific parameters but can't affect Markets configuration.
 
 ### What can curator change?
 
