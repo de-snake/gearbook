@@ -53,7 +53,8 @@ It’s not recommended to set liquidation fee to be lower than 0.01%. If the fee
 
 Borrower loses Liquidation Premium + Liquidation Fee from liquidation collateral.
 
-Expired liquidation premium and fee are useful only if Credit Manager is expirable, which is a rare case, so you can freely omit that parameters.
+Expired liquidation premium and fee are useful only if Credit Manager is expirable, which is a rare case, so you can freely omit that parameters.\
+If set, "Expired" versions of liquidation premium and fee are applied after Credit Manager expiration.
 {% endstep %}
 
 {% step %}
