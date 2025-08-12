@@ -2,7 +2,7 @@
 
 {% stepper %}
 {% step %}
-### Name
+## Name
 
 Name can reflect the properties of collaterals and position size:
 
@@ -15,7 +15,7 @@ Higher tier means larger positions and safer collaterals.
 {% endstep %}
 
 {% step %}
-**Interest Fee**
+## **Interest Fee**
 
 % of borrowing interest taken by DAO and Curator\
 Default fee split is 50/50 between DAO and Curator
@@ -37,7 +37,7 @@ e.g. Create Credit Manager with limit of 5,000,000 USD and Interest Fee of 0% ca
 {% endstep %}
 
 {% step %}
-### Liquidation Premium & Fee
+## Liquidation Premium & Fee
 
 * **Premium -** % of liquidated collateral taken by liquidator&#x20;
 
@@ -58,7 +58,7 @@ If set, "Expired" versions of liquidation premium and fee are applied after Cred
 {% endstep %}
 
 {% step %}
-### Minimum debt, Maximum debt, Max. enabled tokens
+## Minimum debt, Maximum debt, Max. enabled tokens
 
 * **Minimum & Maximum debt** - Credit account created in this Credit Manager can't have debt less than minimum and more than maximum.
 * **Max. enabled tokens** - maximal amount of different tokens that can be counted towards account value (used as cross-collateral margin).
@@ -71,7 +71,7 @@ If set, "Expired" versions of liquidation premium and fee are applied after Cred
 {% endstep %}
 
 {% step %}
-### Whitelist policy, Expiration
+## Whitelist policy, Expiration
 
 **Whitelist** - Allow borrowing only to owners of particular NFT.
 
@@ -79,7 +79,7 @@ If set, "Expired" versions of liquidation premium and fee are applied after Cred
 {% endstep %}
 
 {% step %}
-### Total Debt Limit
+## Total Debt Limit
 
 Maximal sum debt on all credit accounts created in this Credit Manager.
 
