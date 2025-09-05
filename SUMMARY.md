@@ -40,3 +40,7 @@
 
 * [DVstETH leveraged staking](strategies/dvsteth-leveraged-staking.md)
 * [Governance structure](strategies/governance-structure.md)
+
+## T\&C
+
+* [Instance Owner signers](t-and-c/instance-owner-signers.md)
