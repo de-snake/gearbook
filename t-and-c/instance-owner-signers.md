@@ -57,9 +57,9 @@ These Terms & Conditions define the minimum due‑diligence and neutral‑gateke
 
 ***
 
-### 5) Refusal & Escalation Policy
+### 5) Refusal Policy
 
-If **any** requirement in fails or is inconclusive, **decline to sign**. Examples:
+If **any** requirement in fails or is inconclusive, **do not sign any transactions**. Examples:
 
 * Contract not verified;
 * Output not 8‑decimals normalized;
