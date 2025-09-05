@@ -33,7 +33,8 @@ These Terms & Conditions define the minimum due‑diligence and neutral‑gateke
 
 #### 4.1 Contract & Deployment
 
-1. **Feed contract is verified** on a reputable explorer (Etherscan/chain explorer) and **matches the intended implementation** (e.g., AggregatorV3‑compatible external, Pyth/Redstone wrapper, ERC4626 feed, Pendle PT TWAP, etc.).
+1. **Feed contract is verified** on a reputable explorer (Etherscan/chain explorer).
+2. If the feed is not external, it must be deployed from Bytecode Repository.
 
 #### 4.2 Price Output & Decimals
 
@@ -47,12 +48,12 @@ These Terms & Conditions define the minimum due‑diligence and neutral‑gateke
 
 1. **Staleness period** must be reasonable for the source and chain:
    1. **Pull‑type feeds (e.g., Pyth/Redstone pull):** _recommended_ `240s` (4 min) unless documented otherwise.
-   2. **External Aggregator feeds (push/heartbeat):** heartbeat **+ 15 min** (slow chains) or **+ 2 min** (fast chains).&#x20;
+   2. **External Aggregator feeds (push/heartbeat):** heartbeat **+ 15 min** (slower chains, e.g. Ethereum) or **+ 2 min** (faster chains, e.g. L2s).&#x20;
 
 #### 4.4 Asset‑Specific Parameters (when applicable)
 
-1. **Stablecoin‑to‑USD feeds:** The observed price must be **bounded from above at 1.04**. Any stablecoin feed reporting a price above this bound should be treated as invalid and must not be signed.
-2. **LST/LRT‑to‑ETH or to BTC feeds:** The observed ratio must be **bounded from above at 1.04**. If the ratio exceeds this bound, the feed is considered invalid and the transaction must not be signed.
+1. **Stablecoin‑to‑USD feeds:** The observed price should be **bounded from above at 1.04**.
+2. **Pegged assets feeds (LST-to-ETH, LRT-to-BTC, cbBTC-to-BTC etc.):** The observed ratio should be **bounded from above at 1.04**.&#x20;
 
 ***
 
@@ -60,10 +61,10 @@ These Terms & Conditions define the minimum due‑diligence and neutral‑gateke
 
 If **any** requirement in fails or is inconclusive, **decline to sign**. Examples:
 
-* Contract not verified / ownership unclear;
+* Contract not verified;
 * Output not 8‑decimals normalized;
 * Price materially diverges from reputable venues;
 * Staleness period unreasonable for the source/chain;
-* Source‑specific parameters missing/incorrect.
+* Asset‑specific parameters missing/incorrect.
 
 ***
