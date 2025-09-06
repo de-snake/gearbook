@@ -41,6 +41,6 @@
 * [DVstETH leveraged staking](strategies/dvsteth-leveraged-staking.md)
 * [Governance structure](strategies/governance-structure.md)
 
-## T\&C
+## Operational Standards
 
-* [Instance Owner signers](t-and-c/instance-owner-signers.md)
+* [Instance Owner guidlines](operational-standards/instance-owner-guidlines.md)
