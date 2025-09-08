@@ -20,7 +20,7 @@ Existing offchain infra (Front End, Liquidator) rely on router for finding paths
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | <p><em><strong>Uniswap, Sushiswap, Oku Trade</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#uniswap-sushiswap-v2">V2</a>, <a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#uniswap-sushiswap-pancakeswap-iguanadex-oku-trade-v3">V3</a></p>              | Swaps                                                |
 | <p><em><strong>Pancakeswap, IguanaDEX</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#uniswap-sushiswap-pancakeswap-iguanadex-oku-trade-v3">V3</a>, <a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#pancakeswap-iguanadex-stableswap">StableSwap</a></p> | Swaps, Stableswap LP deposits                        |
-| <p><em><strong>Balancer</strong></em><br>V2, V3</p>                                                                                                                                                                                                                                                                                                                                 | Swaps, V2 LP deposits                                |
+| <p><em><strong>Balancer</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#balancer-v2">V2</a>, V3</p>                                                                                                                                                                                                           | Swaps, V2 LP deposits                                |
 | <p><em><strong>Curve</strong></em> <br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#curve-stableswap-cryptoswap-and-stableng">Stableswap, CryptoSwap, Stable NG</a></p>                                                                                                                                                     | Swaps, LP deposits                                   |
 | [_**Pendle**_](https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#curve-stableswap-cryptoswap-and-stableng)                                                                                                                                                                                                                                | PT swaps                                             |
 | <p><em><strong>Mellow</strong></em><br>ERC4626 vaults, DVstETH, Wrapper deposits</p>                                                                                                                                                                                                                                                                                                | Instant deposits, Delayed withdrawals                |
@@ -417,5 +417,82 @@ After each new Convex pool is added, Booster pool ids should be updated.
 
 \
 
+
+</details>
+
+<details>
+
+<summary><strong>Balancer V2</strong></summary>
+
+*   **Add BalancerV2 adapter (requires providing Vault address):**
+
+    <figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+
+    * Deployment addresses: \
+      [https://docs-v2.balancer.fi/reference/contracts/deployment-addresses/mainnet.html](https://docs-v2.balancer.fi/reference/contracts/deployment-addresses/mainnet.html)
+
+{% hint style="warning" %}
+Before adding adapter, please ensure that tokens from a pool and pool LP token itself are added as _**Assets to Market**_ and as _**Collaterals to Credit Manager**_.\
+\
+&#xNAN;_&#x65;.g. to add WETH/osETH pool to adapter both WETH, osETH and WETH/osETH token itself must be added before._\
+\
+_learn how to find pool's token address below._
+{% endhint %}
+
+* **Finding Pool LP Token Address:**
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 13.58.46.png" alt=""><figcaption></figcaption></figure>
+
+* **Configure adapter to whitelist pools:**
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 13.55.44 (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+
+*   Configuration requires specifying PoolID which can be found on Balancer UI\
+
+
+    <figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 13.53.56.png" alt=""><figcaption></figcaption></figure>
+
+</details>
+
+<details>
+
+<summary><strong>Balancer V3</strong></summary>
+
+* **Add BalancerV3 adapter (requires providing Gateway address):**
+
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+
+* Gateway deployment addresses:
+  * Ethereum: 0x21f55223de449224e8bdf4f59452e072bdf7af57
+
+{% hint style="warning" %}
+Before adding adapter, please ensure that tokens from a pool and pool LP token itself are added as _**Assets to Market**_ and as _**Collaterals to Credit Manager**_.\
+\
+&#xNAN;_&#x65;.g. to add_ waEthLidowstET&#x48;_/rstETH pool to adapter both_ waEthLidowstET&#x48;_, rstETH and_ waEthLidowstET&#x48;_/rstETH token itself must be added before._\
+\
+_learn how to find pool's token address below._
+{% endhint %}
+
+{% hint style="info" %}
+What are _wa_-tokens?\
+It's erc4626 vaults representing positions staked in Aave pools. \
+To support swaps from wstETH through waEthLidowstET&#x48;_/rstETH_ boosted Balancer pool, you need to include wa-token as collateral and add erc4626 adapter with wa-token address as vault which will process swaps from wstETH to waEthLidowstETH.
+{% endhint %}
+
+* **Finding Pool LP Token Address:**
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 15.27.47 (1).png" alt=""><figcaption></figcaption></figure>
+
+* **Configure adapter to whitelist pools:**
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 13.55.44 (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+
+* Configuration requires specifying Pool Address which can be found on Balancer UI
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 15.27.47 (2).png" alt=""><figcaption></figcaption></figure>
 
 </details>
