@@ -20,10 +20,10 @@ Existing offchain infra (Front End, Liquidator) rely on router for finding paths
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | <p><em><strong>Uniswap, Sushiswap, Oku Trade</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#uniswap-sushiswap-v2">V2</a>, <a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#uniswap-sushiswap-pancakeswap-iguanadex-oku-trade-v3">V3</a></p>              | Swaps                                                |
 | <p><em><strong>Pancakeswap, IguanaDEX</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#uniswap-sushiswap-pancakeswap-iguanadex-oku-trade-v3">V3</a>, <a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#pancakeswap-iguanadex-stableswap">StableSwap</a></p> | Swaps, Stableswap LP deposits                        |
-| <p><em><strong>Balancer</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#balancer-v2">V2</a>, V3</p>                                                                                                                                                                                                           | Swaps, V2 LP deposits                                |
+| <p><em><strong>Balancer</strong></em><br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#balancer-v2">V2</a>, <a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#balancer-v3">V3</a></p>                                                                                     | Swaps, V2 LP deposits                                |
 | <p><em><strong>Curve</strong></em> <br><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#curve-stableswap-cryptoswap-and-stableng">Stableswap, CryptoSwap, Stable NG</a></p>                                                                                                                                                     | Swaps, LP deposits                                   |
 | [_**Pendle**_](https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#curve-stableswap-cryptoswap-and-stableng)                                                                                                                                                                                                                                | PT swaps                                             |
-| <p><em><strong>Mellow</strong></em><br>ERC4626 vaults, DVstETH, Wrapper deposits</p>                                                                                                                                                                                                                                                                                                | Instant deposits, Delayed withdrawals                |
+| <p><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/configuring-adapters#mellow-erc4626"><em><strong>Mellow</strong></em></a><br>ERC4626 vaults, DVstETH</p>                                                                                                                                                                                         | Instant deposits, Delayed withdrawals                |
 | <p><em><strong>Velodrome, Aerodrome</strong></em> <br>V3, Stableswap</p>                                                                                                                                                                                                                                                                                                            | Swaps                                                |
 | <p><em><strong>Camelot, Thena</strong> (Algebra AMM dexes)</em><br>V3</p>                                                                                                                                                                                                                                                                                                           | Swaps                                                |
 | _**Napier**_                                                                                                                                                                                                                                                                                                                                                                        | PT Swaps, LP deposits                                |
@@ -494,5 +494,26 @@ To support swaps from wstETH through waEthLidowstET&#x48;_/rstETH_ boosted Balan
 * Configuration requires specifying Pool Address which can be found on Balancer UI
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 15.27.47 (2).png" alt=""><figcaption></figcaption></figure>
+
+</details>
+
+<details>
+
+<summary><strong>Mellow ERC4626</strong></summary>
+
+{% hint style="warning" %}
+Before adding adapter, please ensure that mellow vault (LRT itself) and its Withdrawal Phantom Token are added _**Assets to Market**_ and as _**Collaterals to Credit Manager**_.\
+\
+If the phantom token is not present in PFS, ask Gearbox contributors to help you deploy a new one.
+{% endhint %}
+
+* **Add Mellow ERC4626 adapter:**
+
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
+* Vault address
+  * Select a corresponding Mellow vault (LRT itself) that was previously added as collateral.
+* Phantom Token
+  * A token that tracks user's position in withdrawal queue and allows unstaking LRT right from the Credit Account.
 
 </details>
