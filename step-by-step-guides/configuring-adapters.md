@@ -278,9 +278,9 @@ Before adding pool to adapter, please ensure that pool's input token and PT toke
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-31 at 19.07.10.png" alt=""><figcaption></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-31 at 19.08.20 (1).png" alt=""><figcaption></figcaption></figure>
 * _**Input token:**_\
@@ -352,7 +352,7 @@ e.g. sUSDe can be minted from USDe using ERC4626 deposit interface, but has time
 
 Takes Gateway Address as parameter. On Berachain it's 0x8d41361d340515d1cdd8c369ca7b5c79f6b2e9c9.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After adding adapter, click configure to whitelist particular Islands.
 
@@ -383,7 +383,7 @@ Before adding and configuring Convex pool adapters, ensure that **Curve LP token
 
 **Add Convex Base Reward Pool adapter.**&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * _**Base Reward Pool Address:**_
   *   Rewards contract address from Convex pool Info.
@@ -507,13 +507,32 @@ Before adding adapter, please ensure that mellow vault (LRT itself) and its With
 If the phantom token is not present in PFS, ask Gearbox contributors to help you deploy a new one.
 {% endhint %}
 
-* **Add Mellow ERC4626 adapter:**
+### **Add Mellow ERC4626 adapter:**
 
 <figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 * Vault address
   * Select a corresponding Mellow vault (LRT itself) that was previously added as collateral.
 * Phantom Token
+  * A token that tracks user's position in withdrawal queue and allows unstaking LRT right from the Credit Account.
+
+### **Add Mellow claimer adapter:**
+
+This adapter allows claiming unstaked tokens after the redemption request was processed.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Mellow Claimer is a contract deployed by Mellow. Deployment addresses can be found here: [https://docs.mellow.finance/multi-deployments#navigation](https://docs.mellow.finance/multi-deployments#navigation)
+
+**Configure Mellow Claimer Adapter**
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 17.13.56.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+* Multi vault
+  * Mellow LRT itself
+* Phantom token
   * A token that tracks user's position in withdrawal queue and allows unstaking LRT right from the Credit Account.
 
 </details>
