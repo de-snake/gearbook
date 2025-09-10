@@ -36,10 +36,11 @@
 * [Queuing transactions](step-by-step-guides/queuing-transactions.md)
 * [Testing app on forks](step-by-step-guides/testing-app-on-forks.md)
 
-## Strategies
+## Feature explainers
 
-* [DVstETH leveraged staking](strategies/dvsteth-leveraged-staking.md)
-* [Governance structure](strategies/governance-structure.md)
+* [DVstETH leveraged staking](feature-explainers/dvsteth-leveraged-staking.md)
+* [Governance structure](feature-explainers/governance-structure.md)
+* [Seamless LP migration](feature-explainers/seamless-lp-migration.md)
 
 ## Operational Standards
 
