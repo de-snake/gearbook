@@ -24,14 +24,22 @@ The solution is based on unique features of Gearbox and therefore is impossible 
 The core idea of solution is tokenizing User's position in withdrawal queue:
 
 * User initiated redemption of 1k rstETH through Gearbox adapter and sent rstETH to withdrawal contract
-* Gearbox adapter minted 1k Withdrawal Phantom Tokens (WPT) to user, representing user's claim for withdrawn wstETH
+* Gearbox adapter minted 1k Delayed Withdrawal Phantom Token (WD-token) to user, representing user's claim for withdrawn wstETH
 * When wstETH is unstaked and withdrawn by user, he burns Withdrawal Phantom Tokens and receives wstETH
 
 #### Risks and curator's job:
 
-* Withdrawal Phantom Token (WPT) is a new unique type of collateral which has its own risk parameters that will likely differ from the LRT itself (Main & Reserve price feed, Limit, LTV).
-* WPT is non-transferrable outside of Gearbox Credit Accounts
-* WPT can't be liquidated
+* Delayed Withdrawal Phantom Token (WD-token) is a new unique type of collateral which has its own risk parameters that will likely differ from the LRT itself (Main & Reserve price feed, Limit, LTV).
+* WD-token is non-transferrable outside of Gearbox Credit Accounts
+* WD-token can't be liquidated
+
+{% hint style="success" %}
+Since WD-tokens are not liquidatable, the most favorable setting is when the position's HF is high enough not to fall below 1 due to accrued debt while redemption is being processed. \
+\
+One of the ways to achieve it is to set reserve feed of WD-token to be lower than its Main feed by some percentage. This percentage will effectively enforce the minimal health factor for user to have to initiate delayed withdrawal.\
+\
+Reserve to main price discount of 2% will mean that user has to maintain HF above \~2% to initiate full withdrawal of his collateral.
+{% endhint %}
 
 ## Position unwinding scenario
 
