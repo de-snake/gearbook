@@ -45,3 +45,7 @@
 ## Operational Standards
 
 * [Instance Owner guidlines](operational-standards/instance-owner-guidlines.md)
+
+***
+
+* [Instance Activation guidlines](instance-activation-guidlines.md)
