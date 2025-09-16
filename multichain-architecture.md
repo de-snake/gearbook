@@ -13,7 +13,7 @@ Gearbox architecture allows day-0 creation of lending markets on any EVM chain. 
 * **Custom-built essential tooling**\
   From opensource Safe interface to scalable system of Anvil forks for testing & tools for intraday monitoring of protocol solvency and configuration correctness.
 
-## Cross-chain governance
+## Cross Chain Multisig (Cross-chain governance)
 
 **Permissionless Curation Contracts** are designed to enable the Gearbox Protocol to function fully without active DAO involvement, with DAO influence restricted at the smart-contract level. The design follows these key principles:
 
@@ -22,7 +22,7 @@ Gearbox architecture allows day-0 creation of lending markets on any EVM chain. 
 * **Exclusive Control Over System Contract Versions**: Only the DAO can authorize new versions of system contracts (core protocol logic) for use. Adding adapters, price feeds, bots, or other components remains permissionless.
 * **Chain Expansion Oversight**: Only the DAO can activate Gearbox on new chains, ensuring the correct Treasury address and Instance Owner multisig are set.
 
-## Chain-specific governance
+## Instance Owner (Chain-specific governance)
 
 Different blockchain networks have unique characteristics, particularly in their oracles and ecosystem protocols, which are critical for the Gearbox Protocol’s integrations.&#x20;
 
