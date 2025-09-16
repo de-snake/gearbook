@@ -49,3 +49,7 @@
 ***
 
 * [Instance Activation guidlines](instance-activation-guidlines.md)
+
+## System Roles
+
+* [Emergency admin](system-roles/emergency-admin.md)
