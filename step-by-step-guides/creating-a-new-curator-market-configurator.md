@@ -4,20 +4,27 @@ Market Configurator (MC) is a contract that has rights to change parameters of c
 
 ### Video explainer
 
+The UI is located at [https://permissionless.gearbox.foundation/curators](https://permissionless.gearbox.foundation/curators)
+
+{% hint style="success" %}
+**You can use any wallet to connect to the curation UI - it's only a frontend + backend to provide no-code curation experience.**\
+\
+**You only need access to Admin wallet with real signers for executing onchain actions which is the final step of any setup.**
+{% endhint %}
+
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F9n0QLqkiJru3BYkpyr8F%2Fuploads%2FuR65FqEWMVzqxHTPATPZ%2Fmc%20creation.mp4?alt=media&token=8f5d8f23-e731-4318-bf20-66cefab6f690" %}
 
 {% stepper %}
 {% step %}
 ### Fill in the required parameters
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 * Admin address: \
-  The address having the most permissions to execute changes through Timelock \
-  &#xNAN;_&#x75;sually Safe multisig or MPC wallet_
+  Safe multisig having the most permissions to execute changes through Timelock.
 * Emergency Admin address: \
-  Has permissions to execute the emergency changes without timelock\
-  [Permissions list](https://app.gitbook.com/o/-MVf0w9QBIQw5nuscwFc/s/9n0QLqkiJru3BYkpyr8F/~/changes/8/step-by-step-guides/creating-a-new-curator-market-configurator#emergency-admin-permissions).
+  Has permissions to execute the emergency changes without timelock.\
+  More info on this: [https://docs.gearbox.fi/gearbox-permissionless-doc/emergency-roles/emergency-admin](https://docs.gearbox.fi/gearbox-permissionless-doc/emergency-roles/emergency-admin)
 * Fee Collector address: \
   The address which receives Curator’s share of fee split
 * Transaction format: \
@@ -37,7 +44,7 @@ Market Configurator (MC) is a contract that has rights to change parameters of c
 
 On Instances Page click on a chain where you've deployed Market Configurator&#x20;
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 Click on a Sync button and wait for Sync to end
 

@@ -93,9 +93,12 @@ _Example:_ Epoch = 2 days. Curator decides to update rates on Monday 10:00 ⇒ N
 {% step %}
 ### Loss policy
 
-**(Advanced feature, explanation and examples are WIP. Feel free to skip for now)**:\
 Additional logic applied during CA liquidation if it results in creation of Bad Debt.\
+\
 &#xNAN;_**Aliased**_ policy reprices collateral tokens with aliased feeds (set separately). \
-&#xNAN;_**Example**: Main oracle for USDe can be set to Market Chainlink price while Aliased feed set to Proof Of Reserves feed. It means that in the scenario when USDe depegs but reserves are safe according to Proof Of Reserves feed, accounts will be liquidated until it can be done without creating Bad Debt._
+\
+&#xNAN;_**Example**:_&#x20;
+
+* Main ezETH feed - Market price
 {% endstep %}
 {% endstepper %}

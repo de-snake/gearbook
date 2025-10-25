@@ -1,8 +1,12 @@
 # Table of contents
 
+## Protocol Overview
+
+* [Gearbox one-pager](README.md)
+
 ## Permissionless curation concepts <a href="#permissionless-curation" id="permissionless-curation"></a>
 
-* [Key concepts and system overview](README.md)
+* [Key concepts and system overview](permissionless-curation/key-concepts-and-system-overview.md)
 
 ***
 
@@ -21,35 +25,43 @@
 ***
 
 * [Multichain architecture](multichain-architecture.md)
-* [Direct withdrawals](direct-withdrawals.md)
+* [Direct redemptions for semi-liquid assets](direct-redemptions-for-semi-liquid-assets.md)
+* [Copy of Direct redemptions for semi-liquid assets (old)](copy-of-direct-redemptions-for-semi-liquid-assets-old.md)
 
 ## Step-by-step guides&#x20;
 
 * [Creating a new Curator (Market Configurator)](step-by-step-guides/creating-a-new-curator-market-configurator.md)
 * [Adding required Price Feeds](step-by-step-guides/adding-required-price-feeds.md)
 * [Creating a Market](step-by-step-guides/creating-a-market.md)
-* [Configuring a Market](step-by-step-guides/configuring-a-market.md)
-* [Creating a Credit Manager](step-by-step-guides/creating-a-credit-manager.md)
-* [Configuring a Credit Manager](step-by-step-guides/configuring-a-credit-manager.md)
-* [Configuring Adapters](step-by-step-guides/configuring-adapters.md)
+* [Allowing strategies for the Market](step-by-step-guides/allowing-strategies-for-the-market.md)
+* [Claiming fee share](step-by-step-guides/claiming-fee-share.md)
 * [Executing transactions](step-by-step-guides/executing-transactions.md)
 * [Queuing transactions](step-by-step-guides/queuing-transactions.md)
-* [Testing app on forks](step-by-step-guides/testing-app-on-forks.md)
+* [Testing config on forks](step-by-step-guides/testing-config-on-forks.md)
 
 ## Feature explainers
 
 * [DVstETH leveraged staking](feature-explainers/dvsteth-leveraged-staking.md)
 * [Governance structure](feature-explainers/governance-structure.md)
 * [Seamless LP migration](feature-explainers/seamless-lp-migration.md)
+* [Credit Account migration](feature-explainers/credit-account-migration.md)
 
 ## Operational Standards
 
-* [Instance Owner guidlines](operational-standards/instance-owner-guidlines.md)
+* [Feeds configuration guidlines](operational-standards/feeds-configuration-guidlines.md)
+* [Instance Activation guidlines](operational-standards/instance-activation-guidlines.md)
+* [Asset integration process](operational-standards/asset-integration-process.md)
 
-***
+## Emergency Roles
 
-* [Instance Activation guidlines](instance-activation-guidlines.md)
+* [Emergency admin](emergency-roles/emergency-admin.md)
+* [Pausable/Unpausable admin](emergency-roles/pausable-unpausable-admin.md)
+* [Insolvency monitor (Internal Use only)](emergency-roles/insolvency-monitor-internal-use-only.md)
 
-## System Roles
+## Advanced Configuration
 
-* [Emergency admin](system-roles/emergency-admin.md)
+* [Configuring a Market](advanced-configuration/configuring-a-market.md)
+* [Creating a Credit Manager](advanced-configuration/creating-a-credit-manager.md)
+* [Configuring a Credit Manager](advanced-configuration/configuring-a-credit-manager.md)
+* [Configuring Adapters](advanced-configuration/configuring-adapters.md)
+* [Creating Bundles](advanced-configuration/creating-bundles.md)

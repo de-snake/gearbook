@@ -24,7 +24,7 @@ Interface for accessing each chain's PFS is located at [https://permissionless.g
 
 ## What price feed sources are already integrated? _(Click on feed to see details)_
 
-<table><thead><tr><th>Price source</th><th width="159.078125">Feed type</th><th>Supported collaterals &#x26; features</th></tr></thead><tbody><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#external-feeds"><em><strong>Chainlink, Redstone push, EO</strong></em><br>AggregatorV3Interface - compatible external price providers</a></td><td>External</td><td>Blue-chip tokens</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#erc4626-exchange-rate"><em><strong>ERC4626 exchange rate</strong></em></a></td><td>ERC4626</td><td>Most of the yield-bearing vaults</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#pyth"><em><strong>Pyth</strong></em></a></td><td>Pyth</td><td>Blue chip &#x26; emerging tokens</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#redstone-pull"><em><strong>Redstone pull</strong></em></a></td><td>Redstone</td><td>Deployed on any EVM on day 0</td></tr><tr><td><em><strong>Upper bound</strong></em></td><td>Bounded</td><td><ul><li>Bound borrowed tokens to protect borrowers from liquidations</li><li>Bound collateral tokens to protect LPs from price manipulation</li></ul></td></tr><tr><td><em><strong>Multiply 2 feeds price</strong></em></td><td>Composite</td><td>Optimal way to price correlated token pairs</td></tr><tr><td><em><strong>Constant price</strong></em></td><td>Constant</td><td><ul><li>Hardcode pegged assets</li><li>Apply premium or discount combining with composite feed</li></ul></td></tr><tr><td><em><strong>Curve LP</strong></em> </td><td>Curve_crypto<br>Curve_stable</td><td>Collateralize Curve LP tokens</td></tr><tr><td><em><strong>Token price from Curve Pool</strong></em></td><td>Curve TWAP</td><td>Collateralize experimental tokens</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#pendle-pt"><em><strong>Pendle PT</strong></em></a></td><td>Pendle PT TWAP</td><td>Get TWAP market price of PTs</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#kodiak-island"><em><strong>Kodiak Island</strong></em></a></td><td>Kodiak_island</td><td>Get island share price</td></tr></tbody></table>
+<table><thead><tr><th>Price source</th><th width="159.078125">Feed type</th><th>Supported collaterals &#x26; features</th></tr></thead><tbody><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#external-feeds"><em><strong>Chainlink, Redstone push, EO</strong></em><br>AggregatorV3Interface - compatible external price providers</a></td><td>External</td><td>Blue-chip tokens</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#erc4626-exchange-rate"><em><strong>ERC4626 exchange rate</strong></em></a></td><td>ERC4626</td><td>Most of the yield-bearing vaults</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#pyth"><em><strong>Pyth</strong></em></a></td><td>Pyth</td><td>Blue chip &#x26; emerging tokens</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#redstone-pull"><em><strong>Redstone pull</strong></em></a></td><td>Redstone</td><td>Deployed on any EVM on day 0</td></tr><tr><td><em><strong>Upper bound</strong></em></td><td>Bounded</td><td><ul><li>Bound borrowed tokens to protect borrowers from liquidations</li><li>Bound collateral tokens to protect LPs from price manipulation</li></ul></td></tr><tr><td><em><strong>Multiply 2 feeds price</strong></em></td><td>Composite</td><td>Optimal way to price correlated token pairs</td></tr><tr><td><em><strong>Constant price</strong></em></td><td>Constant</td><td><ul><li>Hardcode pegged assets</li><li>Apply premium or discount combining with composite feed</li></ul></td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#curve-stable"><em><strong>Curve LP</strong></em> </a></td><td>Curve_crypto<br>Curve_stable</td><td>Collateralize Curve LP tokens</td></tr><tr><td><em><strong>Token price from Curve Pool</strong></em></td><td>Curve TWAP</td><td>Collateralize experimental tokens with pricing based on DEX trades</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#pendle-pt"><em><strong>Pendle PT</strong></em></a></td><td>Pendle PT TWAP</td><td>Get TWAP market price of PTs</td></tr><tr><td><a href="https://docs.gearbox.fi/gearbox-permissionless-doc/step-by-step-guides/adding-required-price-feeds#kodiak-island"><em><strong>Kodiak Island</strong></em></a></td><td>Kodiak_island</td><td>Get island share price</td></tr></tbody></table>
 
 ## Setup details
 
@@ -34,7 +34,7 @@ Interface for accessing each chain's PFS is located at [https://permissionless.g
 
 **Click New Feed and select Pyth type**
 
-<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 _**Pyth dashboard with feeds info:**_ [_**https://insights.pyth.network/price-feeds**_](https://insights.pyth.network/price-feeds)
 
@@ -77,6 +77,10 @@ _**Pyth dashboard with feeds info:**_ [_**https://insights.pyth.network/price-fe
     If the update happened more than Staleness Period seconds ago, feed value should be updated or the contracts will revert
   * Recommended value for Pull feeds: 240s = 4min
 
+{% hint style="warning" %}
+Right after a new Pyth feed is deployed it's required to send 0.000001 ETH to its address. Without  it won't function and can't be added to Price Feed Store.
+{% endhint %}
+
 </details>
 
 <details>
@@ -85,7 +89,7 @@ _**Pyth dashboard with feeds info:**_ [_**https://insights.pyth.network/price-fe
 
 **Click New Feed and select External type**
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 _**Dashboards of external providers:**_
 
@@ -129,7 +133,7 @@ _This contract fetches mint/redeem rate from specified erc4626 vault and multipl
 
 **Click New Feed and select ERC4626 type**
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 ### _Config parameters:_
 
@@ -157,7 +161,7 @@ To understand what asset's feed should be passed as underlying, go to the ERC462
 
 **Click New Feed and select Redstone type**
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 ### _Config parameters:_
 
@@ -201,7 +205,7 @@ To understand what asset's feed should be passed as underlying, go to the ERC462
 
 **Click New Feed and select Kodiak\_island type**
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 ### _Config parameters:_
 
@@ -229,9 +233,48 @@ To understand what asset's feed should be passed as underlying, go to the ERC462
 
 <summary>Pendle PT</summary>
 
+{% hint style="info" %}
+## Before any deployment, ensure that pendle market has correct cardinality. It should be no less than twapWindow / blockTime + 1 for a given chain.
+
+To check cardinality, go to LP contract and get \_storage()\[4].\
+To update cardinality, call increaseObservationsCardinalityNext of an LP contract.
+{% endhint %}
+
+## Pendle chainlink-compatible factory
+
+* Factory Addresses:
+  * Plasma: 0xAcD67f36183c8bA6b80Cfa60375510Ce17D0dd26
+  * Mainnet: 0x9E5129dcC15d39625617DcD7F0F44FB0BB957FFd
+
+1.  Deploy PT to SY oracle using createOracle Factory method
+
+    **Market**: Pendle Market address\
+    **twapDuration**: twap duration in seconds (1800 recommended)\
+    **baseOracleType**: 0 (PT to SY price)
+
+    <figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+2) Add deployed pendle feed as external (staleness period = 1)
+3) Deploy Composite Gearbox Oracle \
+   Set Feed 1 to previously deployed PT-to-SY feed\
+   Set Feed 2 to feed which prices SY to USD
+
+<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+
+3.  Deploy Bounded Gearbox Oracle \
+    Set underlying feed to previously deployed Composite feed\
+    Set bound to 1\
+
+
+    <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+
+
+
+## Gearbox PT feed
+
 **Click New Feed and select Pendle PT TWAP type**
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 ### _Config parameters:_
 
@@ -254,6 +297,11 @@ To understand what asset's feed should be passed as underlying, go to the ERC462
   * The window length in seconds for averaging market price
   * Value of 1800s was usually used for previous deployments
 
+## Deploy Bounded Gearbox Oracle&#x20;
+
+Set underlying feed to previously deployed PT TWAP feed\
+Set bound to 1
+
 </details>
 
 <details>
@@ -262,7 +310,7 @@ To understand what asset's feed should be passed as underlying, go to the ERC462
 
 **Click New Feed and select Curve\_stable type**
 
-<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 ### _Config parameters:_
 
@@ -285,5 +333,80 @@ To understand what asset's feed should be passed as underlying, go to the ERC462
 - underlyingPriceFeed 0/1/2/3
   * Select a feed from allowed list to price pool's tokens at given indexes
   * If pool has only 2 tokens in it, specify only underlyingPriceFeed0 & 1
+
+</details>
+
+<details>
+
+<summary>Pendle LP</summary>
+
+{% hint style="info" %}
+## Before any deployment, ensure that pendle market has correct cardinality. It should be no less than twapWindow / blockTime + 1 for a given chain.
+
+To check cardinality, go to LP contract and get \_storage()\[4].\
+To update cardinality, call increaseObservationsCardinalityNext of an LP contract.
+{% endhint %}
+
+## Pendle chainlink-compatible factory
+
+* Factory Addresses:
+  * Plasma: 0xAcD67f36183c8bA6b80Cfa60375510Ce17D0dd26
+  * Mainnet: 0x9E5129dcC15d39625617DcD7F0F44FB0BB957FFd
+
+1.  Deploy PT to SY oracle using createOracle Factory method
+
+    **Market**: Pendle Market address\
+    **twapDuration**: twap duration in seconds (1800 recommended)\
+    **baseOracleType**: 2 (LP to SY price)
+
+    <figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+2) Add deployed pendle feed as external (staleness period = 1)
+3) Deploy Composite Gearbox Oracle \
+   Set Feed 1 to previously deployed LP-to-SY feed\
+   Set Feed 2 to feed which prices SY to USD
+
+<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+
+3.  Deploy Bounded Gearbox Oracle \
+    Set underlying feed to previously deployed Composite feed\
+    Set bound to 1\
+
+
+    <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+
+
+
+## Gearbox PT feed
+
+**Click New Feed and select Pendle PT TWAP type**
+
+<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+
+### _Config parameters:_
+
+* Name:&#x20;
+  * Specify token Symbol and source of Underlying Price\
+    Example:
+    * Name: PT-sUSDE-25SEP2025 (Chainlink)
+      * Underlying feed: sUSDe/USD (Chainlink)
+
+- market
+  *   Pendle Market address
+
+      <figure><img src="../.gitbook/assets/Screenshot 2025-08-05 at 19.23.34 (1).png" alt=""><figcaption></figcaption></figure>
+- UnderlyingPriceFeed
+  * The feed contract is able to fetch price of PT token in terms of SY token from the Pendle Market and then multiplies it by SY price in terms of USD ⇒ underlying feed is an intended method to price SY in terms of USD.
+- priceToSy
+  * _**Most likely you need to check this box**_ (if on the previous step you set underlying price feed to be equal to SY price)
+  * If you don't check this box, you will need to use asset price as underlying price feed. (read more about the difference between Asset and SY [here](https://docs.pendle.finance/Developers/Contracts/StandardizedYield#asset-of-sy--assetinfo-function))
+- twapWindow
+  * The window length in seconds for averaging market price
+  * Value of 1800s was usually used for previous deployments
+
+## Deploy Bounded Gearbox Oracle&#x20;
+
+Set underlying feed to previously deployed PT TWAP feed\
+Set bound to 1
 
 </details>

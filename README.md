@@ -1,30 +1,40 @@
-# Key concepts and system overview
+# Gearbox one-pager
 
-With permissionless architecture Gearbox has became even more composable, evolving into a techical stack that allows growing lending businesses, developing DeFi ecosystems and deploy lending markets on any chain by enyone having interest and capacity to do so.
+### **Composable lending protocol**
 
-[https://permissionless.gearbox.foundation/](https://permissionless.gearbox.foundation/) is the entrypoint for no-code deployment, curation and collaboration with Gearbox.
+**Gearbox is a full-fledged lending protocol powered by Credit Account architecture, enabling to build unique products and businesses on top.**\
+Designed from the ground up for composability, Gearbox brings native leverage and modular integrations across DeFi.
 
-### What is permissionless?
+***
 
-Anyone can deploy Market Configurator to create and manage Gearbox Markets without needing governance approval.&#x20;
+### Platform for curators
 
-### What is Gearbox Market?
+**Gearbox functions as a permissionless lending infrastructure layer — a foundation for curators to build and manage their own markets.**\
+Using Gearbox’s modular architecture, curators can define custom parameters, risk models, and integrations.
 
-Gearbox Market is a set of modular contracts allowing to facilitate lending, borrowing and productive usage of collaterals at rules set by Curator.\
-Properties of a single market include but are not limited to Underlying Token, its Price Feed, Interest Rate Model, collateral-specific Limits and Additional Rates.
+***
 
-### What is Gearbox Instance?
+### **Unique features**
 
-**Instance** = **Chain ID** activated by DAO for deployment + Chain-specific address of **DAO Treasury** + **Instance Owne**r multisig that helps configure chain-specific parameters but can't affect Markets configuration.
+#### **Direct Withdrawals from semi-liquid vaults**
 
-### What can curator change?
+The design of Gearbox is built for modern on-chain assets — especially RWA, LST, LRT, and other yield-bearing assets with delayed withdrawals.\
+In most lending systems, closing such positions requires creating DEX liquidity, which is expensive, thin, and exposes users to slippage. Gearbox enables direct interaction with underlying contracts, allowing one-to-one withdrawals without touching a DEX. This dramatically simplifies Ops for asset issuers and users alike, while making capital flow smoother and more cost-efficient across the ecosystem.
 
-The Curator can adjust all Market parameters, with a mandatory 24-hour timelock enforced at the smart-contract level for any changes.
+Read in detail below:
 
-### What is possible with permissionless curation?
+{% embed url="https://docs.gearbox.fi/gearbox-permissionless-doc/direct-redemptions-for-semi-liquid-assets" %}
 
-Each market consists of tens of contracts, including Pool, Oracle, IRM, Loss policy, Credit Managers and Adapters. Such modular architecture allows creating products with market-best flexibility and granular parametrization making Gearbox Protocol the premier platform for crafting sophisticated financial products that address specific market demands and drive long-term value creation.
+#### Collateral-Specific Interest Rates
 
-Below is a diagram of the contracts and parameters that a curator can configure, so you can get an idea of how detailed market configuration can be.
+Gearbox ensures that every dollar of liquidity works efficiently — not just sitting idle, but actively managed as part of a dynamic portfolio. Each collateral type has its own interest rate, which allows the system to price risk accurately and allocate capital where it’s most productive.\
+Unlike traditional lending markets that apply one generic borrow rate to all assets, Gearbox fine-tunes risk and reward per collateral. As a result, utilization is consistently higher — meaning better capital efficiency for LPs, more flexibility for users, and more sticky liquidity for the chain overall.
 
-<figure><img src=".gitbook/assets/system.jpg" alt=""><figcaption></figcaption></figure>
+#### Non-Tokenized Position support
+
+Any position in DeFi can be leveraged on Gearbox — not just ERC20 or ERC4626 tokens. This opens up leverage opportunities for LP tokens, yield-bearing assets, structured products, and beyond — all without the complexity or fragmentation of tokenized derivatives.
+
+#### How does this affect in real life scenarios?
+
+Thanks to all of the above Gearbox managed to get 100M in TVL in Plasma, always spiking to 90% whenever there was any liquidity available, more interesting collaterals, yields and permissionless onboarding of curators make Gearbox a unique protocol to grow for chains and curators.\
+Thanks to all the tools that allow gearbox to always max out utilization the capital becomes stickier, not relying on pure incentives to pay lenders high, organic and sustainable returns

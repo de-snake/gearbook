@@ -10,6 +10,10 @@ If the only button you see is "Reopen for Changes", click it and you will be abl
 
 ## Executing with Gearbox open-sourced Safe Permissionless UI
 
+After finalizing the batch link to the Safe UI with prepared txs will appear.
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-26 at 16.28.03.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="success" %}
 [Permissionless Safe](https://docs.gearbox.fi/gearbox-permissionless-doc/competitive-advantages/essential-tooling-for-curators#permissionless-safe) is an open-source, IPFS-hosted version of the Safe Multisig UI designed to review and sign transactions securely in a human-readable format. It eliminates backend dependencies to mitigate risks like Bybit-type attacks and performs checks of IPFS CID signature to prevent phishing.
 {% endhint %}
@@ -22,6 +26,6 @@ If the only button you see is "Reopen for Changes", click it and you will be abl
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F9n0QLqkiJru3BYkpyr8F%2Fuploads%2Fyb33s6xLnXsLKLpRTyWw%2Fgip%20finalization.mp4?alt=media&token=02949fc6-5b9b-42f0-9926-da454ee91015" %}
 
-## Executing with official Safe UI (not recommended, lacks readable parsing and reliability)
+## Executing transactions
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F9n0QLqkiJru3BYkpyr8F%2Fuploads%2FFxxkDqLMbQ6FUlYKrrUN%2Ffinalizing.mp4?alt=media&token=8cf1249e-2f66-4e5f-8bc3-3be2ed733707" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F9n0QLqkiJru3BYkpyr8F%2Fuploads%2FD996Q64luHv4QiwGPr9o%2FScreen%20Recording%202025-09-26%20at%2016.22.38.mp4?alt=media&token=560c82f9-1526-4a0e-b9f7-e7db93e75534" %}
