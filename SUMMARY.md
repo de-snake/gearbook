@@ -18,7 +18,7 @@
 
 ## Competitive advantages
 
-* [Dual-oracle pricing](competitive-advantages/dual-oracle-pricing.md)
+* [Dual-oracle pricing and loss policy](competitive-advantages/dual-oracle-pricing-and-loss-policy.md)
 * [Collateral-specific rates](competitive-advantages/collateral-specific-rates.md)
 * [Essential tooling for curators](competitive-advantages/essential-tooling-for-curators.md)
 

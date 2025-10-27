@@ -1,4 +1,4 @@
-# Dual-oracle pricing
+# Dual-oracle pricing and loss policy
 
 Gearbox oracle and solvency checks structure allows creating pricing methods with unique features:
 
@@ -27,7 +27,7 @@ $$
 
 Oracles are crucial for determining collateral value in lending protocols. Unlike simple exchanges (e.g., Uniswap), lending protocols rely heavily on external data. Risks include:
 
-* &#x20;**Node compromise:** Hackers could gain control of oracle nodes, submitting incorrect data. Popular oracles often rely on 4-5 nodes, selecting median values; compromising 2 or 3 of them can significantly distort reported prices.
+* **Node compromise:** Hackers could gain control of oracle nodes, submitting incorrect data. Popular oracles often rely on 4-5 nodes, selecting median values; compromising 2 or 3 of them can significantly distort reported prices.
 * **Thin liquidity manipulation:** Oracles aggregate prices from various trading sources (DEXes, CEXes). In cases of low liquidity and infrequent trades, malicious actors can temporarily inflate asset prices. For example, manipulating a short-duration TWAP (e.g., 4 minutes) can lead to artificially high collateral valuations, as recently observed with Chainlink.
 
 ### Pricing methodologies
@@ -39,7 +39,7 @@ There are two main methodologies of pricing tokens that is used in most of the l
 * **Secondary market price**\
   Price at which token is bought and sold on DEXes, CEXes or any other liquid market.
 
-<table><thead><tr><th width="163.31640625">Feed type</th><th width="265.55859375" valign="top">Pros</th><th width="345.36328125" valign="top">Cons</th></tr></thead><tbody><tr><td>Hardcoded Fundamental<br>Backing Value Exhange Rate</td><td valign="top"><strong>Borrowers:</strong><br>- Minimal risks of liquidation<br>- Up-to-date reflection of staked collateral price appreciation<br><strong>Lenders:</strong><br>- Resistant to market manipulation, important for illiquid tokens</td><td valign="top"><strong>Lenders:</strong><br>- Possible overpricing during hacks and market turmoils</td></tr><tr><td>Secondary market price</td><td valign="top"><strong>Lenders:</strong><br>- Pessimistic pricing (liquid tokens usually trade at discount to their backing value)</td><td valign="top"><strong>Borrowers:</strong><br>- Less capital-efficient: have to maintain higher HF to avoid liquidations<br>- Can cause cascading liquidations<br><strong>Lenders:</strong><br>- Illiquid collateral markets can be manipulated to drain pool reserves at inflated price</td></tr></tbody></table>
+<table><thead><tr><th width="163.31640625">Feed type</th><th width="265.55859375" valign="top">Pros</th><th valign="top">Cons</th></tr></thead><tbody><tr><td>Hardcoded Fundamental<br>Backing Value Exhange Rate</td><td valign="top"><strong>Borrowers:</strong><br>- Minimal risks of liquidation<br>- Up-to-date reflection of staked collateral price appreciation<br><strong>Lenders:</strong><br>- Resistant to market manipulation, important for illiquid tokens</td><td valign="top"><strong>Lenders:</strong><br>- Possible overpricing during hacks and market turmoils<br>- Deposited funds can be freezed in pool due to lack of incentives for repayment or liquidation</td></tr><tr><td>Secondary market price</td><td valign="top"><strong>Lenders:</strong><br>- Pessimistic pricing (liquid tokens usually trade at discount to their backing value)<br>- Fast reaction to real market drops</td><td valign="top"><strong>Borrowers:</strong><br>- Less capital-efficient: have to maintain higher HF to avoid liquidations<br>- Can cause cascading liquidations<br><strong>Lenders:</strong><br>- Illiquid collateral markets can be manipulated to drain pool reserves at inflated price<br>- Liquidation cascades can lead to overselling and creation of bad debt on liquidations</td></tr></tbody></table>
 
 ### Dual-Oracle system: best of both worlds
 
@@ -52,7 +52,19 @@ Let's compare how properly configured **Main** and **Reserve** feeds can protect
 | deUSD/USD market price pumps by >2.5%                                         | <mark style="background-color:green;">No liquidations of existing positions</mark>                                                                                                                                                                                                                                                                         | <mark style="background-color:green;">No liquidations of existing positions</mark>                                                                                                                                                                                                                                                                                                             | <mark style="background-color:green;">No liquidations of existing positions</mark>                                                                                                                                                                                                                                                                                                                                     |
 | <p>(illiquid market manipulation)<br>deUSD/USD market price pumps by >10%</p> | <p><mark style="background-color:green;">No liquidations of existing positions</mark><br><br><mark style="background-color:green;">Can borrow $1.02 per deUSD, but can't withdraw it from credit account ⇒ liquidity doesn't exit the protocol.</mark></p>                                                                                                 | <mark style="background-color:green;">No liquidations of existing positions</mark>                                                                                                                                                                                                                                                                                                             | <p><mark style="background-color:green;">No liquidations of existing positions</mark></p><p></p><p><mark style="background-color:red;">Attack vector:</mark><br><mark style="background-color:red;">- mint deUSD at $1</mark><br><mark style="background-color:red;">- borrow $1.02 at max LTV (e.g. 92.5%)</mark></p><p><br><mark style="background-color:red;">TVL lent drained due to inflated valuation</mark></p> |
 
-### Custom Feeds contracts to price all the DeFi
+## Loss policy: if you chose to use Market prices
+
+<figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+
+Using Market oracles may cause liquidation cascades which lead to massive price drops (see [ezETH cascading liquidations in April 2024](https://protos.com/depeg-of-3b-restaking-token-ezeth-causes-over-60m-in-defi-liquidations/)).
+
+Quick price drop can make positions insolvent if happen too fast for liquidator to react. Sometimes it may be better not to liquidate at market prices especially if the liquidation creates bad debt, since in setting of cascading liquidation assets can be oversold compared to its mid-long term value.
+
+Loss policy is made especially to protect LPs against this case:
+
+<figure><img src="../.gitbook/assets/Gearbox protocol - Frame 7.jpg" alt=""><figcaption></figcaption></figure>
+
+## Custom Feeds contracts to price all the DeFi
 
 The Gearbox Oracle contract supports major price feed providers, including Chainlink, Redstone (both pull and push models), and Pyth. These providers are referred to as _external_ because their data often comes from off-chain sources (e.g., centralized exchanges) or requires off-chain computation applied to on-chain data.
 
