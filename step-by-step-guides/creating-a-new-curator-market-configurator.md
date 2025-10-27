@@ -12,6 +12,12 @@ The UI is located at [https://permissionless.gearbox.foundation/curators](https:
 **You only need access to Admin wallet with real signers for executing onchain actions which is the final step of any setup.**
 {% endhint %}
 
+{% hint style="warning" %}
+**If you're using MPC wallet, please create a safe multisig with MPS as 1/1 signer.**\
+\
+**Gearbox has a lot of tooling to work using Safe Multisigs.**
+{% endhint %}
+
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F9n0QLqkiJru3BYkpyr8F%2Fuploads%2FuR65FqEWMVzqxHTPATPZ%2Fmc%20creation.mp4?alt=media&token=8f5d8f23-e731-4318-bf20-66cefab6f690" %}
 
 {% stepper %}
