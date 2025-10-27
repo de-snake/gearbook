@@ -56,11 +56,16 @@ Let's compare how properly configured **Main** and **Reserve** feeds can protect
 
 <figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
-Using Market oracles may cause liquidation cascades which lead to massive price drops (see [ezETH cascading liquidations in April 2024](https://protos.com/depeg-of-3b-restaking-token-ezeth-causes-over-60m-in-defi-liquidations/)).
+Using market oracles can sometimes trigger liquidation cascades, where a rapid price drop causes mass liquidations and further depresses the asset’s price. An example is the [ezETH cascading liquidations in April 2024](https://protos.com/depeg-of-3b-restaking-token-ezeth-causes-over-60m-in-defi-liquidations/).
 
-Quick price drop can make positions insolvent if happen too fast for liquidator to react. Sometimes it may be better not to liquidate at market prices especially if the liquidation creates bad debt, since in setting of cascading liquidation assets can be oversold compared to its mid-long term value.
+When prices fall too quickly, liquidators may be unable to react in time. As a result, positions can become insolvent before liquidation completes. In such scenarios, continuing to liquidate at the current market price may actually create bad debt, because collateral can be sold far below its fair or medium-term value.
 
-Loss policy is made especially to protect LPs against this case:
+To protect liquidity providers (LPs) in these situations, Gearbox implements a Loss Policy mechanism.
+
+The logic is as follows:
+
+1. Positions are liquidated using market prices under normal conditions.
+2. If a liquidation would create bad debt, the protocol reprices the collateral using the aliased price, which can be configured to the asset’s fundamental value, and halts the liquidation if the position is healthy under this pricing.
 
 <figure><img src="../.gitbook/assets/Gearbox protocol - Frame 7.jpg" alt=""><figcaption></figcaption></figure>
 
