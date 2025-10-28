@@ -161,6 +161,15 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
 
 <summary><strong>Velodrome, Aerodrome V3 (Slipstream)</strong></summary>
 
+For the router on the chain to support swaps, Fluid worker should be configured.
+
+It requires passing the following addresses:
+
+* SwapRouter
+* Quoter
+
+
+
 *   **Add UniswapV3 adapter (requires providing SwapRouter address):**
 
     <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
