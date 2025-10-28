@@ -78,3 +78,10 @@ _Positions become liquidatable if Health Factor <= 1_
 
 * <mark style="background-color:$success;">Conservative positions (with higher Health Factors) can redeem their full collateral size.</mark>
 * <mark style="background-color:$warning;">Riskier positions must retain part of their collateral as liquid tokens, serving as a buffer that can be used for partial liquidations or deleverage if needed.</mark>
+
+{% hint style="danger" %}
+Case for careful consideration:\
+\- Pool's underlying token = token1 (e.g. USDT)\
+\- Phantom token's underlying token = token2 (e.g. mHYPER is withdrawn into USDC)\
+\- So position in withdrawal queue may become liquidatable if USDT to USDC price rises
+{% endhint %}
