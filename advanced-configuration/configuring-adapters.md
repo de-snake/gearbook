@@ -79,8 +79,7 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 11.42.58.png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
-
-- Uni V2
+* Uni V2
   *   Configuration requires specifying tokens from a pair
 
       <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
@@ -144,14 +143,13 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.23.10 (1).png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
-
--   Uni V3
+*   Uni V3
 
     <figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
--   Sushi V3
+*   Sushi V3
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.21.22.png" alt=""><figcaption></figcaption></figure>
--   [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
+*   [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.28.59.png" alt=""><figcaption></figcaption></figure>
 
@@ -176,8 +174,7 @@ It requires passing the following addresses:
 
     * Velodrome V3 (Slipstream) multichain deployment addresses: [https://github.com/velodrome-finance/superchain-slipstream/blob/main/deployment-addresses](https://github.com/velodrome-finance/superchain-slipstream/blob/main/deployment-addresses)
     * Aerodrome V3 (Slipstream) [https://github.com/aerodrome-finance/slipstream?tab=readme-ov-file#deployment](https://github.com/aerodrome-finance/slipstream?tab=readme-ov-file#deployment)
-
--   **Configure adapter to whitelist pools:**\
+*   **Configure adapter to whitelist pools:**\
     &#xNAN;_&#x43;onfiguration requires specifying tokens and fee from a pair_
 
 
@@ -185,7 +182,6 @@ It requires passing the following addresses:
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.23.10 (1).png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
-
 *   Uni V3
 
     <figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
@@ -457,8 +453,7 @@ Before adding and configuring Convex pool adapters, ensure that **Curve LP token
   *   Rewards contract address from Convex pool Info.
 
       <figure><img src="../.gitbook/assets/Screenshot 2025-08-11 at 18.25.08.png" alt=""><figcaption></figcaption></figure>
-
-- _**Staked phantom token:**_
+* _**Staked phantom token:**_
   * **Staked Phantom Token** can be found by its symbol. If the Curve LP token has symbol frxUSDUSDf, then Convex deposit token will have symbol stkcvxfrxUSDUSDf.
 
 **Add Convex Booster adapter**
@@ -631,5 +626,19 @@ Mellow Claimer is a contract deployed by Mellow. Deployment addresses can be fou
   * Mellow LRT itself
 * Phantom token
   * A token that tracks user's position in withdrawal queue and allows unstaking LRT right from the Credit Account.
+
+</details>
+
+<details>
+
+<summary><strong>Midas (direct deposits &#x26; redemptions)</strong></summary>
+
+Midas risks:
+
+\- If Midas rejects a withdrawal request, a credit account that has the request rejected will have its phantom token balance locked and non-claimable. This means that de-facto the account has bad debt (that cannot be liquidated) until the situation is resolved manually
+
+\- A gateway has a function to manually process a cancelled request by paying an amount of at least pendingTokenOutAmount for the respective credit account (the function can be called by anyone). This will allow the credit account to claim a withdrawal as if it was normally processed
+
+\- It's best to forbid the withdrawal phantom token if there is a rejected request to Gearbox CA, since Midas might accidentally refund the withdrawal to the CA itself, leading to double counting. Forbidding the token will prevent the user to borrow and withdraw more against their collateral in this case.
 
 </details>
