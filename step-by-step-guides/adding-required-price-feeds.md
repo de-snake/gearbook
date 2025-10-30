@@ -259,6 +259,10 @@ To update cardinality, call increaseObservationsCardinalityNext of an LP contrac
    Set Feed 1 to previously deployed PT-to-SY feed\
    Set Feed 2 to feed which prices SY to USD
 
+{% hint style="warning" %}
+SY to USD feed shouldn't be of updatable type (Redstone Pull or Pyth pull)
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 3.  Deploy Bounded Gearbox Oracle \
@@ -366,6 +370,10 @@ To update cardinality, call increaseObservationsCardinalityNext of an LP contrac
    Set Feed 1 to previously deployed LP-to-SY feed\
    Set Feed 2 to feed which prices SY to USD
 
+{% hint style="warning" %}
+SY to USD feed shouldn't be of updatable type (Redstone Pull or Pyth pull)
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 3.  Deploy Bounded Gearbox Oracle \
@@ -408,5 +416,23 @@ To update cardinality, call increaseObservationsCardinalityNext of an LP contrac
 
 Set underlying feed to previously deployed PT TWAP feed\
 Set bound to 1
+
+</details>
+
+<details>
+
+<summary>Balancer V3 LP</summary>
+
+## Balancer chainlink-compatible factory
+
+{% hint style="warning" %}
+Feeds of underlying tokens used for deployment shouldn't be of updatable type (Redstone Pull or Pyth pull)
+{% endhint %}
+
+Factory address:&#x20;
+
+* Plasma: 0x86e67E115f96DF37239E0479441303De0de7bc2b
+
+
 
 </details>
