@@ -26,6 +26,7 @@
 
 * [Multichain architecture](multichain-architecture.md)
 * [Direct redemptions for semi-liquid assets](direct-redemptions-for-semi-liquid-assets.md)
+* [Deleverage bot](deleverage-bot.md)
 * [Copy of Direct redemptions for semi-liquid assets (old)](copy-of-direct-redemptions-for-semi-liquid-assets-old.md)
 
 ## Step-by-step guides&#x20;
