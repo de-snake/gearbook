@@ -51,6 +51,10 @@ Liquidation premium &  fee of a credit manager can’t be modified after it’s 
 It’s not recommended to set liquidation fee to be lower than 0.01%. If the fee is set to 0, then account that fully consists of leveraged underlying token will create bad debt upon liquidation.
 {% endhint %}
 
+{% hint style="success" %}
+There is no impact of liquidation fee on the safety of liquidations (it doesn't increase or decrease probability of succesfull liquidations with profit).
+{% endhint %}
+
 Borrower loses Liquidation Premium + Liquidation Fee from liquidation collateral.
 
 Expired liquidation premium and fee are useful only if Credit Manager is expirable, which is a rare case, so you can freely omit that parameters.\
