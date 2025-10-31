@@ -28,7 +28,16 @@ LT can't be higher than 100% - liquidation Fee - liquidation Premium
 {% step %}
 ### Modify LT of existing collateral
 
-LT can't be changed immediately, only through a gradual linear ramp from current LT to target LT that starts when transactions are executed onchain (duration of ramp can be set in UI).
+{% hint style="success" %}
+To protect borrowers from immediate liquidations, LT can't be changed immediately.\
+LT ramping makes LT linearly change current LT to target LT over a specified period.
+{% endhint %}
+
+{% hint style="warning" %}
+The minimal Ramp duration is 2 days (172800 seconds).
+{% endhint %}
+
+Ramp starts when transactions are executed onchain (duration of ramp can be set in UI).
 
 <figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
