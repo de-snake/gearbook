@@ -149,9 +149,9 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
 *   Sushi V3
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.21.22.png" alt=""><figcaption></figcaption></figure>
-*   [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
+* [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
 
-    <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.28.59.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.28.59.png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -182,15 +182,11 @@ It requires passing the following addresses:
     <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.23.10 (1).png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
-*   Uni V3
+*   Fee is a number specified in UI divided by 10000\
+    e.g. Concentrated Volatile 100 ⇒ fee = 0.01%\
+    Concentrated Stable 1 ⇒ fee = 0.0001%
 
-    <figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
-*   Sushi V3
-
-    <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.21.22.png" alt=""><figcaption></figcaption></figure>
-*   [PancakeSwap](https://pancakeswap.finance/info/v3/pairs), [IguanaDEX](https://www.iguanadex.com/info/v3?chain=etherlink)
-
-    <figure><img src="../.gitbook/assets/Screenshot 2025-07-30 at 12.28.59.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/Screenshot 2025-11-04 at 18.27.03.png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
