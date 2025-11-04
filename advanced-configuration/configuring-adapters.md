@@ -545,6 +545,15 @@ Configuration requires passing:
 
 Balancer deployment addresses can be found [here](https://docs.balancer.fi/developer-reference/contracts/deployment-addresses/plasma.html#core-contracts).
 
+BalancerV3MultiActionQueries deployments:
+
+* Plasma
+  * 0x1a9B1bfD35fA3932493b5f4F20Cb16b2B88Cc0C8
+* Mainnet
+  * 0x0BA8417d19D87b7b5C9dA8762ba505d61D1bF1E7
+* Optimism
+  * 0x1b8a4BA520C7789D7bE7476960B8Cdd42e57d928
+
 ## Adapter configuration
 
 * **Add BalancerV3 adapter (requires providing Gateway address):**
@@ -552,8 +561,14 @@ Balancer deployment addresses can be found [here](https://docs.balancer.fi/devel
 <figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 * Gateway deployment addresses:
-  * Ethereum: 0x21f55223de449224e8bdf4f59452e072bdf7af57
-  * Plasma: 0xd5c89297ad23e12d7f0ff24112418dbe9ebeae56
+  * Ethereum:&#x20;
+    * v3.10 (outdated) 0x21f55223de449224e8bdf4f59452e072bdf7af57
+    * v3.11 (up to date) 0x8A57c21234ddc225499843F6A073dd374c952560
+  * Plasma:&#x20;
+    * v3.10 (outdated) 0xd5c89297ad23e12d7f0ff24112418dbe9ebeae56
+    * v3.11 (up to date) 0x55109bA88c396008cfBe9F27Ad97A7e1e4394f6F
+  * Optimism:
+    * v3.11 (up to date) 0x77b2dfc344072fa242f2d03893ccbdbb0ef47b7c
 
 {% hint style="warning" %}
 Before adding adapter, please ensure that tokens from a pool are added as _**Assets to Market**_ and as _**Collaterals to Credit Manager**_.\
@@ -640,5 +655,19 @@ Midas risks:
 \- A gateway has a function to manually process a cancelled request by paying an amount of at least pendingTokenOutAmount for the respective credit account (the function can be called by anyone). This will allow the credit account to claim a withdrawal as if it was normally processed
 
 \- It's best to forbid the withdrawal phantom token if there is a rejected request to Gearbox CA, since Midas might accidentally refund the withdrawal to the CA itself, leading to double counting. Forbidding the token will prevent the user to borrow and withdraw more against their collateral in this case.
+
+{% hint style="warning" %}
+For safety, each curator on each chain must have its own gateway and phantom token for each vault.
+{% endhint %}
+
+Gateway addresses:
+
+* Plasma
+  * Hyperithm Curator: 0xB375DF6a1D7a1c172e65D4FBDA2d3caa144Bf8e7
+
+Phantom token addresses:&#x20;
+
+* Plasma
+  * Hyperithm Curator: 0x0835e60e9A56734cEE76e3953c3BE0635Fcb71d5
 
 </details>

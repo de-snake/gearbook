@@ -2,21 +2,25 @@
 
 ### TL;DR (Actionable checklist)
 
-1. Check the displayed price in the multisig UI to adequatly match current market values
+1. Txs simulation must pass. Click on Simulate button next to each batch to check.
+2. Check the displayed price in the multisig UI to adequatly match current market values
    1. Review allowPriceFeed transactions.
    2. Grab the token address and verify its price on a DEX aggregator (https://meta.matcha.xyz/)
    3. If not tradable on aggregators, ask the proposer for the correct reference (e.g. Pendle UI for PTs, Curve UI for LP tokens, or the issuer’s app for derivatives/vaults)
    4. Zero price feed (always returns $0) can be safely added to any token for compatibility.
-2. Check staleness period of the feed&#x20;
+3. Check staleness period of the feed&#x20;
    1. Pull feeds → 4 min staleness
    2. Push feeds → Heartbeat + 15 min (Ethereum) / Heartbeat + 2 min (L2s & faster chains).
-3. Check that the feed contract is verified&#x20;
+4. Check that the feed contract is verified&#x20;
    1. &#x20;Confirm verification on the chain’s block explorer.
-4. Check that feeds are adequately capped from above:
+5. Check that feeds are adequately capped from above:
    1. Stablecoin feeds are capped by $1.04 from above
    2. PT feeds for dollar-pegged vaults are capped by $1 from above
+6. If the feed is deployed from external factory, it should use no Pull feeds as underlying feeds of factory deployment.
 
 ⚠️ If any of these criteria aren’t met: don’t sign, ask in chat for clarification.
+
+✅ For a setLimiter transactions it's enough to check that simulation passes. This action updates exchange rate bounds of LP price feeds, and its correctness is checked on a contract level.
 
 ***
 
