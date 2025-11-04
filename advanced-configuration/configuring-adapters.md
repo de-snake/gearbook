@@ -51,7 +51,7 @@ All the source code and audit reports of the contracts can be found in [Bytecode
 
 ## Router configuration
 
-For the router on the chain to support swaps, Fluid worker should be configured.
+For the router on the chain to support swaps, Uniswap V2 worker should be configured.
 
 It requires passing the following addresses:
 
@@ -96,7 +96,7 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
 
 ## Router configuration
 
-For the router on the chain to support swaps, Fluid worker should be configured.
+For the router on the chain to support swaps, Uniswap V3 worker should be configured.
 
 It requires passing the following addresses:
 
@@ -157,9 +157,9 @@ Before allowing pools in adapter, please ensure that tokens from a pair are adde
 
 <details>
 
-<summary><strong>Velodrome, Aerodrome V3 (Slipstream)</strong></summary>
+<summary><strong>Velodrome, Aerodrome Concentrated Liquidity (Slipstream)</strong></summary>
 
-For the router on the chain to support swaps, Fluid worker should be configured.
+For the router on the chain to support swaps, Uniswap V3 worker should be configured.
 
 It requires passing the following addresses:
 
@@ -281,7 +281,7 @@ _learn how to find pool's token address below._
 
 ## Router configuration
 
-For the router on the chain to support swaps, Fluid worker should be configured.
+For the router on the chain to support swaps, Pendle worker should be configured.
 
 It requires passing the following addresses:
 
@@ -485,7 +485,7 @@ After each new Convex pool is added, Booster pool ids should be updated.
 
 ## Router configuration
 
-For the router on the chain to support swaps, Balancer V3 worker should be configured.
+For the router on the chain to support swaps, Balancer V2 worker should be configured.
 
 Configuration requires passing:
 
@@ -665,5 +665,33 @@ Phantom token addresses:&#x20;
 
 * Plasma
   * Hyperithm Curator: 0x0835e60e9A56734cEE76e3953c3BE0635Fcb71d5
+
+</details>
+
+<details>
+
+<summary><strong>Velodrome, Aerodrome V1 &#x26; V2 (Basic volatile and Basic stable)</strong></summary>
+
+For the router on the chain to support swaps, Velodrome worker should be configured.
+
+It requires passing the following addresses:
+
+* Router
+
+
+
+* **Add Velodrome V2 adapter (requires providing Router address):**
+
+<figure><img src="../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+
+* Velodrome v2  optimism deployment addresses: [https://github.com/velodrome-finance/contracts/tree/main/deployment-addresses](https://github.com/velodrome-finance/contracts/tree/main/deployment-addresses)
+*   **Configure adapter to whitelist pools:**\
+    &#xNAN;_&#x43;onfiguration requires specifying tokens and fee from a pair_\
+    _Look for Pool Factory in deployment addresses_
+
+    <figure><img src="../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+* Is Stable?\
+  Basic stable ⇒ Stable\
+  Basic volatile ⇒ not Stable
 
 </details>
