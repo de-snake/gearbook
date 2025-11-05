@@ -128,6 +128,7 @@ If it's not, reach out to Gearbox contributors.
   * Oku Trade
     * [Etherlink](https://explorer.etherlink.com/address/0x2afB54fcaECd41BE4Ecd05d7bd2e193F2F05B99d?tab=contract)
     * [Plasma](https://plasmascan.to/address/0x9Ed7DFCDE80838f9FfaF4e7fFCe5CcE4737c3e3b)
+    * [Optimism](https://explorer.optimism.io/address/0xDb7D5A2146533BAE5C08A869Cb7e085d8Bee6e0F?tab=contract)
 
 {% hint style="warning" %}
 Before allowing pools in adapter, please ensure that tokens from a pair are added as _**Assets to Market**_ and as _**Collaterals to Credit Manager**_.\
