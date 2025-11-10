@@ -11,3 +11,10 @@
 
 ⚠️ If any of these criteria aren’t met: don’t sign, ask in chat for clarification.
 
+
+
+Chain sync process involves uploading all the bytecode of used contracts to Bytecode Repository (like onchain github for secure deployment of all the modules)
+
+Here is an example of sync txs on Optimism: https://optimistic.etherscan.io/txs?a=0xc93155e0a835cf4e17a19463fa67ed43c164d06a\
+\
+The process is gas- and txs- extensive, and requires \~400M of gas and RPC with 10k blocks per getLogs request.
