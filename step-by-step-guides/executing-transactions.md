@@ -8,6 +8,12 @@ If the only button you see is "Reopen for Changes", click it and you will be abl
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-08-08 at 11.43.06.png" alt=""><figcaption></figcaption></figure>
 
+### How to set Earliest Execution Date?
+
+The default timelock is 24h, so you need to get signatures in Owner Multisig before **Earliest Execution Date - 24h.**&#x20;
+
+E.g. if it takes 2h for you to get needed signatures, set **Earliest Execution Date** to _**current time + 2h + 24h.**_
+
 ## Executing with Gearbox open-sourced Safe Permissionless UI
 
 After finalizing the batch link to the Safe UI with prepared txs will appear.
