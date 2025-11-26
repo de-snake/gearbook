@@ -7,27 +7,21 @@
 ## Permissionless curation concepts <a href="#permissionless-curation" id="permissionless-curation"></a>
 
 * [Key concepts and system overview](permissionless-curation/key-concepts-and-system-overview.md)
-
-***
-
-* [A day of a curator](a-day-of-a-curator.md)
-* [Market](market.md)
-* [Fee sharing](fee-sharing.md)
-* [Curation iceberg](curation-iceberg.md)
-* [Deployment addresses](deployment-addresses.md)
+* [A day of a curator](permissionless-curation/a-day-of-a-curator.md)
+* [Market](permissionless-curation/market.md)
+* [Fee sharing](permissionless-curation/fee-sharing.md)
+* [Curation iceberg](permissionless-curation/curation-iceberg.md)
+* [Deployment addresses](permissionless-curation/deployment-addresses.md)
 
 ## Competitive advantages
 
 * [Dual-oracle pricing and loss policy](competitive-advantages/dual-oracle-pricing-and-loss-policy.md)
 * [Collateral-specific rates](competitive-advantages/collateral-specific-rates.md)
 * [Essential tooling for curators](competitive-advantages/essential-tooling-for-curators.md)
-
-***
-
-* [Multichain architecture](multichain-architecture.md)
-* [Direct redemptions for semi-liquid assets](direct-redemptions-for-semi-liquid-assets.md)
-* [Deleverage bot](deleverage-bot.md)
-* [Copy of Direct redemptions for semi-liquid assets (old)](copy-of-direct-redemptions-for-semi-liquid-assets-old.md)
+* [Multichain architecture](competitive-advantages/multichain-architecture.md)
+* [Direct redemptions for semi-liquid assets](competitive-advantages/direct-redemptions-for-semi-liquid-assets.md)
+* [Deleverage bot](competitive-advantages/deleverage-bot.md)
+* [Copy of Direct redemptions for semi-liquid assets (old)](competitive-advantages/copy-of-direct-redemptions-for-semi-liquid-assets-old.md)
 
 ## Step-by-step guides&#x20;
 

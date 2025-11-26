@@ -475,8 +475,7 @@ After each new Convex pool is added, Booster pool ids should be updated.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-08-11 at 18.51.39.png" alt=""><figcaption></figcaption></figure>
 
-\
-
+<br>
 
 </details>
 
@@ -521,8 +520,7 @@ _learn how to find pool's token address below._
 
 <figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
-*   Configuration requires specifying PoolID which can be found on Balancer UI\
-
+*   Configuration requires specifying PoolID which can be found on Balancer UI<br>
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-09-08 at 13.53.56.png" alt=""><figcaption></figcaption></figure>
 

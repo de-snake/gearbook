@@ -34,4 +34,4 @@ The Instance Owner multisig initially includes 3 core Gearbox contributors and 9
 
 To better understand the structure of both protocol-level and chain-specific governance, refer to the scheme below.
 
-<figure><img src=".gitbook/assets/ccg.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ccg.jpg" alt=""><figcaption></figcaption></figure>

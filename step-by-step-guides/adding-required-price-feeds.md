@@ -291,8 +291,7 @@ SY to USD feed shouldn't be of updatable type (Redstone Pull or Pyth pull)
 
 3.  Deploy Bounded Gearbox Oracle \
     Set underlying feed to previously deployed Composite feed\
-    Set bound to 1\
-
+    Set bound to 1<br>
 
     <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
@@ -399,8 +398,7 @@ SY to USD feed shouldn't be of updatable type (Redstone Pull or Pyth pull)
 
 3.  Deploy Bounded Gearbox Oracle \
     Set underlying feed to previously deployed Composite feed\
-    Set bound to 1\
-
+    Set bound to 1<br>
 
     <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 

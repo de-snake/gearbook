@@ -17,4 +17,4 @@ A Gearbox Market consists of modular smart contracts that enable highly customiz
   * Direct vault deposits and withdrawals
   * Unique staking integrations for non-tokenized positions (e.g., Convex, Infrared, and LSD withdrawal queues)
 
-<figure><img src=".gitbook/assets/market.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/market.jpg" alt=""><figcaption></figcaption></figure>

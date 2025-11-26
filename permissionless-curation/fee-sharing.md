@@ -46,4 +46,4 @@ Both Interest and Liquidation fees are set on Credit Manager level. Some example
 
 
 
-<figure><img src=".gitbook/assets/fees.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/fees.jpg" alt=""><figcaption></figcaption></figure>

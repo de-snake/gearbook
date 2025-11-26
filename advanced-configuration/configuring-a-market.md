@@ -57,7 +57,7 @@ Additional rate which is applied on top of IRM-based utilization rate for borrow
 
 To modify collateral-specific rates, set the intended rates in front of each collateral and click "Update Rates".
 
-See [Collateral-specific rates](../fee-sharing.md) for detailed explanation.
+See [Collateral-specific rates](../permissionless-curation/fee-sharing.md) for detailed explanation.
 
 {% hint style="success" %}
 Setting IRM in a way that **borrow rate at target utilization (\~80-85%)** equals **60-70% of expected collateral yield** will allow you to bootstrap utilization by allowing favorable rates.\

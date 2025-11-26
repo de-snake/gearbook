@@ -43,8 +43,7 @@ Since WD-tokens are not liquidatable, the most favorable setting is when the pos
 One of the ways to achieve it is to set reserve feed of WD-token to be lower than its Main feed by some percentage. This percentage will effectively enforce the minimal health factor for user to have to initiate delayed withdrawal.\
 \
 Reserve to main price discount of 2% will mean that user has to maintain HF above \~2% to initiate full withdrawal of his collateral.\
-\
-
+<br>
 {% endhint %}
 
 ## Position unwinding scenario
